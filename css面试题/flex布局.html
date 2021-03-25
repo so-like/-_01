@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box{
+            overflow: hidden;
+            display: flex;
+        }
+        .left,.right{
+            flex: 0 0 200px;
+            background: yellow;
+            min-height: 200px;
+        }
+        .center{
+            flex: 1;
+            background: tomato;
+            min-height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="left">左</div>
+        <div class="center">中</div>
+        <div class="right">右</div>
+    </div>
+</body>
+</html>
