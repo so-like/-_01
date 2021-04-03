@@ -7,6 +7,7 @@ Function.prototype.myCall = function(obj){
     let args = [...arguments].slice(1),
     result = null
 
+    
     // 判断是否传入对象
     // 如果传入为空则使用全局对象 若为严格模式则为undefined
     obj = obj || window

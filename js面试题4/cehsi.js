@@ -11,7 +11,8 @@
 
 // console.log('12'<'4');
 
-function f(){}
-var a =f.prototype
-b= Object.getPrototypeOf(f)
-console.log(a===b);
+// function f(){}
+// var a =f.prototype
+// b= Object.getPrototypeOf(f)
+// console.log(a===b);
+
