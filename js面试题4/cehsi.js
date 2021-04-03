@@ -16,3 +16,4 @@
 // b= Object.getPrototypeOf(f)
 // console.log(a===b);
 
+console.log([,,,].length);
