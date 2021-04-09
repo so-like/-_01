@@ -23,3 +23,5 @@ function fun(a,b){
     return sum
 }
 console.log(fun(1000,2));   //8将1000转换为2进制数为8
+
+

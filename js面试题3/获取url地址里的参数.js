@@ -1,5 +1,5 @@
-// let a = "http://www.baidu.com/helpCenter.html?a=1&b&c=&d=百度&e=<script>alert(0)</script>"
-let a = "http://www.baidu.com/helpCenter.html";
+let a = "http://www.baidu.com/helpCenter.html?a=1&b&c=&d=百度&e=<script>alert(0)</script>"
+// let a = "http://www.baidu.com/helpCenter.html";
 function fun(url) {
   try {
     // 首先将url地址以？分割取后半部分
