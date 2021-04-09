@@ -38,3 +38,10 @@
 
 // let a = [1,2,3,{p:111,b:888}]
 // console.log(deep(a));
+
+
+
+// 函数合理化
+function fun(fn,...args){
+    return fn.length<=arguments.length?fn(...args):fun.apply(null,fn,...args)
+}

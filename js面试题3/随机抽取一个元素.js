@@ -11,3 +11,5 @@ function ranDom(arr){
     }
     return str
 }
+
+console.log(ranDom([1,2,3,4]));
