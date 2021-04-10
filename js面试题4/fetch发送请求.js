@@ -41,3 +41,13 @@ xhr.onreadystatechange = function(){
     }
 }
 xhr.send()
+
+
+// fetch发送ajax请求
+fetch(url).then((response)=>{
+    return response.json()
+}).then((data)=>{
+    console.log(data);
+}).catch((error)=>{
+    console.log(error);
+})
