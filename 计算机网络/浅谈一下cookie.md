@@ -1,0 +1,3 @@
+####   浅谈cookie
+cookie是存在于浏览器和服务器之间用来存储用户状态信息的数据，当下一次访问同源网站时就会将cookie携带在请求头中，发送给服务器通过这样的方式来保存用户的登录状态信息，cookie的大小一般只有4k，并且只能被同源网站所共享和访问。
+cookie中有5个属性分别为 expires用来记录cookie是否过期 path 和domain 用来规定可以被那些url访问 secure用来保证cookie可以安全运输 httpOnly规定了只能由服务器来访问cookie不能通过js来访问
