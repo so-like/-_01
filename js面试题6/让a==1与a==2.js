@@ -36,3 +36,33 @@ var _a = 3;
 if(a_==1 && a== 2 &&_a==3) {
     console.log("Why hello there!")
 }
+
+
+// 如何让a==1 && a==2 && a==3 输出为true
+// 1.重写valueOf方法
+var i= 0
+Function.prototype.valueOf = function(){
+    return i++
+}
+var a = new Function()
+console.log(a==1 && a==2 && a==3);
+
+
+// 2.重写toString方法
+a={
+    i:1,
+    toString:function(){
+        return a.i++
+    }
+}
+console.log(a==1 && a==2 && a==3);
+
+// 3.设置get方法
+var i =0
+// 默认情况下为全局对象
+Object.defineProperty(window,'a',{
+    get:function(){
+        return this.i += 1
+    }
+})
+console.log(a==1 && a==2 && a==3);
