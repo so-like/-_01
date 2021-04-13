@@ -34,3 +34,52 @@ Function.prototype.myBind = function(context) {
       );
     };
   };
+
+// 自定义bind函数
+Function.prototype.myBind = function(obj){
+  if(!obj || typeof obj !== 'function'){
+    console.error('error')
+  }
+  let args = [...arguments][1]
+  fn = this
+  return function Fn(){
+    return fn.apply(
+      this instanceof Fn?this:obj,
+      args.concat(...arguments)
+    )
+  }
+}
+
+// 自定义call函数
+Function.prototype.myCall = function(obj){
+  if(!obj || typeof obj !=='function'){
+    console.error('error')
+  }
+  let args = [...arguments][1]
+  let result = null
+  obj = obj || window
+  obj.fn = this
+  result = obj.fn(...args)
+  delete obj.fn
+  return result
+}
+
+
+
+
+// 自定义apply函数
+Function.prototype.myApply = function(obj){
+  if(!obj || typeof obj !== 'function'){
+    console.error('error')
+  }
+  let result = null
+  obj = obj || window
+  obj.fn = this
+  if(arguments[1]){
+    result = obj.fn(...arguments[1])
+  }else{
+    result = obj.fn()
+  }
+  delete obj.fn
+  return result
+}
