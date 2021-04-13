@@ -1,0 +1,1 @@
+console.log(['520','188','999'].map(parseInt));
