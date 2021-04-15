@@ -6,4 +6,6 @@
 // }
 
 
-console.log(parseInt('123ab'));
+// console.log(parseInt('123ab'));
+
+console.log(typeof String);
