@@ -61,3 +61,33 @@ function fun(obj){
 
 var ll = [1,2,3,3,3,[1,2],[1,2]]
 console.log(fun(ll));
+
+
+// 数组去重
+function fun(obj){
+    if(!obj || typeof obj !=='object'){
+        return null
+    }
+    let str = []
+    for(let i of obj){
+        str.push(JSON.stringify(i))
+    }
+    return Array.from(new Set(str))
+}
+
+// 数组去重
+function fun2(arr){
+    if(arr.length<=1 || Array.isArray(arr) !=='array')return null
+    let str = []
+    str[0] = arr[0]
+    for(let i=0;i<arr.length;i++){
+        for(let j=0;j<str.length;j++){
+            if(arr[i]==str[j]){
+                break
+            }
+            if(j == str.length-1){
+                str.push(arr[j])
+            }
+        }
+    }
+}
