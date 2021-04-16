@@ -1,7 +1,7 @@
 function fun(n) {
   var num1 = 1;
   var num2 = 1;
-  for (let i = 1; i < n; i++) {
+  for (let i = 2; i < n; i++) {
     num2 += num1;
     num1 = num2 - num1;
   }
